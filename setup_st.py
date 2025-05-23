@@ -32,7 +32,7 @@ def initialize_session_state():
         st.session_state['temperature'] = []
     # Initializes the OpenAI API key variable
     if 'api_key' not in st.session_state:
-        st.session_state['api_key'] = ""
+        st.session_state['api_key'] = OPENAI_API_KEY
     # Initializes the use index variable to determine if we use index in replies
     if 'use_index' not in st.session_state:
         st.session_state['use_index'] = False
