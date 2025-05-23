@@ -6,6 +6,8 @@ nltk
 tqdm
 gpt-index
 langchain
+langchain-community
+langchain-core
 streamlit-chat
 stop-words
 Pillow
