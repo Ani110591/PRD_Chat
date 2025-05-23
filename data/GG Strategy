@@ -1,0 +1,38 @@
+Golden Gate Process Strategy
+
+1. The strategy is to validate Price Correction & Time Correction in that order specifically.
+
+Pre-Conditions:
+
+- The stock chart should be loaded with the last 6 months of candlestick pattern data
+
+- There should be exponential moving average indicators of 20Dday, 50 days, 100 days, 200 days in the chart.
+
+
+
+Conditions:
+
+1. Price Correction: The Candlestick which represents the price (CMP) should decisively touch the 200day exponential moving average curve. Decisively means at least 2 candles should touch it and not just a whisk like a tangent of a circle
+
+Configuration: Number of candles here should be a configuration that can be added by the user
+
+
+
+2. Time Correction: After Price correction has happened the following 2 conditions should happen
+
+a. within the next 6-10 candles there should be convergence of the other 3 exponential moving average curves i.e., 20 Days, 50 days & 100 days. Define convergence as all 3 curves are within 1% of each other.
+
+Configruation: The number of candles to wait should be a configuration that can be added by the user
+
+
+
+b. At the same time when condition a is met, the average of 20 day, 50day, 100 day Exponential Moving average should be less than 5% away from the 200 DMA
+
+Configuration: The %age distance between these should again be a configuration
+
+
+
+Indicators:
+
+On Chart: Create a visual indicator using an arrow mark at the candle where the Golden Gate Indicator has appeared to visually indicate the location
+Via Notification: Create an alert that gets triggered when the conditions above are met. This Alert should be an SMS, an Email & a app notification on tradingView
